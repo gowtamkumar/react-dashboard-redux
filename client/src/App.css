@@ -1,0 +1,118 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.footer_fixed_bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  /* left: 0; */
+  z-index: 1030;
+  width: 83%;
+}
+
+/* Footer */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  /* color: rgb(1, 41, 112) !important; */
+  color: #6c757d !important;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.active {
+  background-color: #f6f9ff;
+  font-weight: bold;
+}
+
+.layoutContainer {
+  display: flex;
+  flex-direction: row;
+  /* font-size: 30px;
+  text-align: center; */
+}
+
+.flex-item-left {
+  /* background-color: #f1f1f1; */
+  /* padding: 10px; */
+  width: 230px;
+  flex: 14%;
+}
+
+.flex-item-right {
+  /* background-color: dodgerblue; */
+  padding: 0px 0px 10px 10px;
+  flex: 86%;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+  background-color: white;
+}
+
+/* Responsive Seciton */
+
+@media (max-width: 800px) {
+  .layoutContainer {
+    flex-direction: column;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .flex-item-left {
+    /* background-color: #f1f1f1; */
+    padding: 10px;
+    /* width: 230px; */
+    flex: 14%;
+  }
+}
+
+/* global */
+
+/* navbar */
+
+.mobileSidebar {
+  top: 0;
+  left: 0;
+  width: 232px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+}
+
+.sidebaritem {
+  padding: 10px;
+  margin-left: 14px;
+}
+
+.mobileSidebar_body {
+  flex-grow: 1;
+  /* padding: 1rem 1rem; */
+  overflow-y: auto;
+}
+
+/* sidebar */
+.sidebarChildren:hover {
+  background-color: #f6f9ff;
+}

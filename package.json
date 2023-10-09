@@ -1,0 +1,35 @@
+{
+  "name": "react-dashboard",
+  "version": "1.0.0",
+  "description": "React Deashboard",
+  "author": "Gowtam Kumar",
+  "private": true,
+  "license": "MIT",
+  "main": "",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "install:client": "npm install --prefix client",
+    "install:server": "npm install --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build:server": "npm run build --prefix client",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start:prod --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm run start --prefix client",
+    "server": "npm run start:dev --prefix server",
+    "seeder:down": "npm run seeder:down --prefix server",
+    "seeder:up": "npm run seeder:up --prefix server",
+    "ppostbuild": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix server && npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gowtamkumar/react-dashboard"
+  },
+  "homepage": "",
+  "dependencies": {
+    "concurrently": "^6.0.1",
+    "react-toastify": "^9.0.8"
+  }
+}
